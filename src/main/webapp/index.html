@@ -1,0 +1,99 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body {
+                background-color: lightblue; /* Cambia el color de fondo a azul claro */
+            }
+        </style>
+        <script>
+            function limpiarFormulario() {
+                // Obtener referencia a los campos del formulario
+                var nombreInput = document.getElementById('nombre');
+                var apellidoInput= document.getElementById('apellido')
+                var emailInput = document.getElementById('email');
+                var mensajeTextarea = document.getElementById('mensaje')
+                var edadInput = document.getElementById('edad');
+                var cursolInput = document.getElementById('curso');
+                var lenguajelInput = document.getElementById('lenguaje');
+                var generolInput = document.getElementById('genero');
+
+                // var mensajeTextarea = document.getElementById('mensaje');
+
+                // Limpiar los valores de los campos
+                nombreInput.value = '';
+                apellidoInput.value='';
+                emailInput.value = '';
+                mensajeTextarea.value = '';
+                cursolInput.value = '';
+                edadInput.value= '';
+                lenguajelInput.value='';
+                generolInput.value='';
+            }
+
+
+
+        </script>
+    </head>
+    <body>
+    <center><h1 style="color: Blue;font-size: xx-large">AVANCE</h1></center>
+
+    <hr>
+
+
+    <center>
+    <h2>Formulario de Contacto</h2>
+
+        <form action="formulario" method="post">
+
+
+
+           <hr>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br><br>
+
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido" name="apellido"><br><br>
+
+            <label for="edad">Edad:</label><br>
+            <input type="text" id="edad" name="edad"><br><br>
+
+            <label for="curso">Curso:</label><br>
+            <input type="text" id="curso" name="curso"><br><br>
+
+            <label>GENERO:</label><br><br>
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">FEMENINO</label><br>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">MASCULINO</label>
+                <br>
+            <br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br><br>
+
+            <label>Lenguaje de programación favorito:</label><br>
+            <input type="radio" id="java" name="lenguaje" value="Java">
+            <label for="java">Java</label><br>
+            <input type="radio" id="python" name="lenguaje" value="Python">
+            <label for="python">Python</label><br>
+            <input type="radio" id="javascript" name="lenguaje" value="JavaScript">
+            <label for="javascript">JavaScript</label><br>
+            <input type="radio" id="csharp" name="lenguaje" value="C#">
+            <label for="csharp">C#</label><br><br>
+
+
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+
+            <input type="button" value="Limpiar" onclick="limpiarFormulario()">
+            <input type="submit" value="Enviar" >
+        </form>
+    </center>
+
+
+
+    </body>
+    </html>
